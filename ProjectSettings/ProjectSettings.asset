@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 73c9fb23ac9e615488023442910e86a9
+  productGUID: fb3e40ede8012f74f831b54da910e9d5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: lvlDisaingGame
+  productName: levelDisaign
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -678,14 +678,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: lvlDisaingGame
+  metroPackageName: levelDisaign
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: lvlDisaingGame
+  metroApplicationDescription: levelDisaign
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -755,10 +755,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 39984e9b-77e2-4c73-93b9-aa5a139c23e9
+  cloudProjectId: 6fbf56b8-dd28-4a97-a6e6-599fe2b6a05f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: lvlDisaingGame
+  projectName: levelDisaign
   organizationId: invenibles
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

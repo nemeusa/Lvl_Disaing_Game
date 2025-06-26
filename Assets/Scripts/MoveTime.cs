@@ -4,37 +4,78 @@ using UnityEngine;
 
 public class MoveTime : MonoBehaviour
 {
-    [SerializeField] private Transform pointA;
-    [SerializeField] private Transform pointB;
+    [Header("Asigna al menos 2 puntos")]
+    [SerializeField] private PointData[] points;
     [SerializeField] private float moveSpeed = 3f;
 
-    private bool goingToB = true;
-    private bool isMoving = false;
-    private Vector3 targetPosition;
+    private Coroutine moveCoroutine;
+    private int currentIndex = 0;
+    private Renderer _renderer;
 
     private void Start()
     {
-        transform.position = pointA.position;
-        targetPosition = pointB.position;
-    }
-
-    private void Update()
-    {
-        if (isMoving)
+        if (points == null || points.Length < 2)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            Debug.LogError(" Debes asignar al menos 2 puntos en el array 'points'");
+            enabled = false;
+            return;
+        }
 
-            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-            {
-                isMoving = false;
-            }
+        transform.position = points[0].point.position;
+
+        _renderer = GetComponent<Renderer>();
+        if (_renderer != null)
+        {
+            _renderer.material.color = points[0].color;
+        }
+    }
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(1)) // clic derecho
+        {
+            Advance(1);
+        }
+        else if (Input.GetMouseButtonDown(0)) // clic izquierdo
+        {
+            Advance(-1);
         }
     }
 
-    private void OnMouseDown()
+    private void Advance(int direction)
     {
-            goingToB = !goingToB;
-            targetPosition = goingToB ? pointB.position : pointA.position;
-            isMoving = true;
+        currentIndex += direction;
+
+        if (currentIndex >= points.Length)
+            currentIndex = points.Length - 1;
+        else if (currentIndex < 0)
+            currentIndex = 0;
+
+        if (moveCoroutine != null)
+            StopCoroutine(moveCoroutine);
+
+        moveCoroutine = StartCoroutine(MoveTo(points[currentIndex].point.position));
+
+        if (_renderer != null)
+        {
+            _renderer.material.color = points[currentIndex].color;
+        }
     }
+
+    private System.Collections.IEnumerator MoveTo(Vector3 target)
+    {
+        while (Vector3.Distance(transform.position, target) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        transform.position = target;
+        moveCoroutine = null;
+    }
+}
+
+[System.Serializable]
+public struct PointData
+{
+    public Transform point;
+    public Color color;
 }
