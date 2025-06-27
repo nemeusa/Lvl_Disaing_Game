@@ -29,6 +29,7 @@ public class MoveTime : MonoBehaviour
             _renderer.material.color = points[0].color;
         }
     }
+
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(1)) // clic derecho
