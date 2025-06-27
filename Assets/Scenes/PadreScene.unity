@@ -7451,8 +7451,8 @@ Transform:
   m_GameObject: {fileID: 756859747}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.108332, y: -20.97, z: 1.2923068}
-  m_LocalScale: {x: 0.41666666, y: 1, z: 0.30769232}
+  m_LocalPosition: {x: 17.108332, y: -18.61, z: 0.36}
+  m_LocalScale: {x: 0.41666666, y: 1, z: 0.16190903}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 645418399}
@@ -7474,7 +7474,7 @@ MonoBehaviour:
     color: {r: 0.21407938, g: 1, b: 0, a: 1}
   - point: {fileID: 1331074351}
     color: {r: 1, g: 0.90439117, b: 0, a: 1}
-  moveSpeed: 30
+  moveSpeed: 15
 --- !u!43 &773401674
 Mesh:
   m_ObjectHideFlags: 0
