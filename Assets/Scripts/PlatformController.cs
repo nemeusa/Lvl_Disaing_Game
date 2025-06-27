@@ -4,37 +4,24 @@ using UnityEngine;
 
 public class PlatformController : MonoBehaviour
 {
-    private bool isOnPlatform = false;
-    private Transform platformTransform;
+    private Vector3 previousPosition;
 
-    private void OnCollisionEnter(Collision collision)
+    public Vector3 movement; // Dirección de movimiento (puedes animarla o cambiarla dinámicamente)
+
+    void Start()
     {
-        // Comprobamos si el jugador está en contacto con la plataforma
-        if (collision.gameObject.CompareTag("Platform"))
-        {
-            isOnPlatform = true;
-            platformTransform = collision.transform;  // Guardamos la referencia de la plataforma
-            transform.SetParent(platformTransform);   // Hacemos al jugador hijo de la plataforma
-        }
+        previousPosition = transform.position;
     }
 
-    private void OnCollisionExit(Collision collision)
+    void Update()
     {
-        if (collision.gameObject.CompareTag("Platform"))
-        {
-            isOnPlatform = false;
-            platformTransform = null;  // Limpiamos la referencia cuando el jugador sale de la plataforma
-            transform.SetParent(null);  // El jugador deja de ser hijo de la plataforma
-        }
+        transform.position += movement * Time.deltaTime;
     }
 
-    private void Update()
+    public Vector3 GetPlatformDelta()
     {
-        // Si el jugador está en la plataforma y no tiene movimiento independiente, puede ser controlado por la plataforma
-        if (isOnPlatform && platformTransform != null)
-        {
-            // Si la plataforma se mueve, el jugador debería moverse junto con ella
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        }
+        Vector3 delta = transform.position - previousPosition;
+        previousPosition = transform.position;
+        return delta;
     }
 }
