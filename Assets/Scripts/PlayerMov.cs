@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMov : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerMov : MonoBehaviour
     private Vector3 moveDirection;
     private Transform currentPlatform;
     private PlatformController movingPlatform;
+    int _coins;
+    [SerializeField] TMP_Text _coinsText;
 
     void Update()
     {
@@ -23,6 +26,12 @@ public class PlayerMov : MonoBehaviour
         {
             controller.Move(movingPlatform.GetPlatformDelta());
         }
+    }
+
+    public void AddCoin()
+    {
+        _coins++;
+        _coinsText.text = "Monedas: " + _coins;
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)

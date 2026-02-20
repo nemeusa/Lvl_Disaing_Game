@@ -19486,6 +19486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1461372676}
   speed: 5
+  _coinsText: {fileID: 0}
 --- !u!143 &1461372676 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}

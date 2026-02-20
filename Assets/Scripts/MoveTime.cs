@@ -62,7 +62,7 @@ public class MoveTime : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator MoveTo(Vector3 target)
+    IEnumerator MoveTo(Vector3 target)
     {
         while (Vector3.Distance(transform.position, target) > 0.01f)
         {
