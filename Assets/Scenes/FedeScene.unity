@@ -70568,6 +70568,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 562889674}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+<<<<<<< HEAD
 --- !u!23 &833257710
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71068,6 +71069,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853391502}
   m_Mesh: {fileID: 4300026, guid: ab02f76641b00024bbb1f7ef756067c6, type: 3}
+=======
+>>>>>>> parent of e0ce013 (Escena Fede)
 --- !u!1 &854292267
 GameObject:
   m_ObjectHideFlags: 0
@@ -73581,6 +73584,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 
   m_GameObject: {fileID: 929948047}
   m_Enabled: 0
@@ -73621,6 +73625,34 @@ MonoBehaviour:
 --- !u!33 &929948050
 MeshFilter:
 
+=======
+  m_GameObject: {fileID: 931284707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: af0ae2dbf3d1efb4f82af377950704a2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &931284710
+CanvasRenderer:
+>>>>>>> parent of e0ce013 (Escena Fede)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -78151,10 +78183,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 
 --- !u!4 &1153964916
 --- !u!64 &1156180144
 
+=======
+--- !u!64 &1156180144
+>>>>>>> parent of e0ce013 (Escena Fede)
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83855,6 +83891,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< HEAD
 
 --- !u!1 &1211552761
 GameObject:
@@ -84086,6 +84123,8 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0769279, y: 0.11048668, z: 0.100646175}
   m_Center: {x: 0.0029747207, y: 0.030870192, z: 0.008056027}
+=======
+>>>>>>> parent of e0ce013 (Escena Fede)
 --- !u!43 &1213277720
 Mesh:
   m_ObjectHideFlags: 0
@@ -91615,17 +91654,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 
       value: 1
 
+=======
+      value: 1
+>>>>>>> parent of e0ce013 (Escena Fede)
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -91633,9 +91676,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
 
       value: 188.931
 
+=======
+      value: 0
+>>>>>>> parent of e0ce013 (Escena Fede)
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -94915,7 +94962,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of e0ce013 (Escena Fede)
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
@@ -94936,9 +94986,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 
       value: -0
 
+=======
+      value: -0
+>>>>>>> parent of e0ce013 (Escena Fede)
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalRotation.z
@@ -94950,9 +95004,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+<<<<<<< HEAD
 
       value: 0
 
+=======
+      value: 0
+>>>>>>> parent of e0ce013 (Escena Fede)
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -109724,6 +109782,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 538813545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1753026077
 GameObject:
   m_ObjectHideFlags: 0
@@ -109830,6 +109889,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753026077}
   m_Mesh: {fileID: 4300016, guid: ab02f76641b00024bbb1f7ef756067c6, type: 3}
+=======
+>>>>>>> parent of e0ce013 (Escena Fede)
 --- !u!43 &1768834943
 Mesh:
   m_ObjectHideFlags: 0
@@ -116566,6 +116627,7 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+<<<<<<< HEAD
 --- !u!1 &1993746454
 GameObject:
   m_ObjectHideFlags: 0
@@ -117136,6 +117198,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002462736}
   m_Mesh: {fileID: 4300030, guid: ab02f76641b00024bbb1f7ef756067c6, type: 3}
+=======
+>>>>>>> parent of e0ce013 (Escena Fede)
 --- !u!1 &2003777290
 GameObject:
   m_ObjectHideFlags: 0
