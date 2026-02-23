@@ -2,19 +2,27 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: GenericRockMatMOSS_PBR
   m_Shader: {fileID: 4800000, guid: 221c1cf6f04aa9441b632c0eb64d9c72, type: 3}
-  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _DETAIL_MULX2
+  - _EMISSION
+  - _NORMALMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -63,8 +71,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Snow_Diffuse:
-        m_Texture: {fileID: 2800000, guid: 00984d1eedeedfd419236feb11430537, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: b794e4558cbe7e549a4b81b1225374b6, type: 3}
+        m_Scale: {x: 5.23, y: -0.2}
         m_Offset: {x: 0, y: 0}
     - _Snow_NormalMap:
         m_Texture: {fileID: 2800000, guid: c1cd73848fcb94246ae28e59d6bfc991, type: 3}
@@ -78,8 +86,9 @@ Material:
         m_Texture: {fileID: 2800000, guid: 365b87d85b829f848a2084b4e11359c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-    - _Base_Glossyness: 0.16
+    - _Base_Glossyness: 0.658
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -93,8 +102,8 @@ Material:
     - _Parallax: 0.02
     - _Shininess: 2.3020215
     - _SmoothnessTextureChannel: 0
-    - _Snow_Amount: 0.82
-    - _Snow_Glossyness: 0
+    - _Snow_Amount: 0.129
+    - _Snow_Glossyness: 0.317
     - _Snow_tiling: 7.24
     - _SpecInt: 1
     - _SpecularHighlights: 1
@@ -103,8 +112,9 @@ Material:
     - _ZWrite: 1
     - _snow_offset: 0
     m_Colors:
-    - _Base_specCol: {r: 0, g: 0, b: 0, a: 1}
+    - _Base_specCol: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     - _SpecColor: {r: 0.08823532, g: 0.08823532, b: 0.08823532, a: 0.122}
+  m_BuildTextureStacks: []
