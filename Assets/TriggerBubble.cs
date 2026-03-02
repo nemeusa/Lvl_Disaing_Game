@@ -12,4 +12,11 @@ public class TriggerBubble : MonoBehaviour
             objetoObjetivo.SetActive(true);
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            objetoObjetivo.SetActive(false);
+        }
+    }
 }

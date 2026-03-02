@@ -8,14 +8,23 @@ public class Flicker : MonoBehaviour
     public int blinkCount = 2;  // Número de parpadeos
     public float blinkDuration = 0.3f;  // Duración de cada parpadeo
     public float timeBetweenBlinks = 0.1f;  // Tiempo entre parpadeos
-
+    public GameObject targetObject;  
     private bool isBlinking = false;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !isBlinking)  // Detecta el click
+        if (Input.GetMouseButtonDown(0) && !isBlinking)  
         {
-            StartCoroutine(BlinkScreen());
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))  
+            {
+                if (hit.collider.gameObject == targetObject)
+                {
+                    StartCoroutine(BlinkScreen());  
+                }
+            }
         }
     }
 
@@ -25,22 +34,17 @@ public class Flicker : MonoBehaviour
 
         for (int i = 0; i < blinkCount; i++)
         {
-            // Parpadeo a negro
             yield return StartCoroutine(Fade(0f, 1f));
-            // Esperar un pequeño intervalo
             yield return new WaitForSeconds(timeBetweenBlinks);
-            // Parpadeo a transparente
             yield return StartCoroutine(Fade(1f, 0f));
 
-            // Si no es el último parpadeo, espera entre ellos
             if (i < blinkCount - 1)
                 yield return new WaitForSeconds(timeBetweenBlinks);
         }
 
         isBlinking = false;
 
-        // Desactiva el objeto después de ejecutar el parpadeo
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); 
     }
 
     IEnumerator Fade(float startAlpha, float endAlpha)
@@ -56,6 +60,6 @@ public class Flicker : MonoBehaviour
             yield return null;
         }
 
-        fadeImage.color = new Color(color.r, color.g, color.b, endAlpha);  // Asegura que termine con el valor correcto
+        fadeImage.color = new Color(color.r, color.g, color.b, endAlpha);  
     }
 }
