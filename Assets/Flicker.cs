@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 
 public class Flicker : MonoBehaviour
 {
+    public static event Action OnFlickerClicked;
+
     public Image fadeImage;  // Imagen negra de UI
     public int blinkCount = 2;  // Número de parpadeos
     public float blinkDuration = 0.3f;  // Duración de cada parpadeo
@@ -22,6 +25,7 @@ public class Flicker : MonoBehaviour
             {
                 if (hit.collider.gameObject == targetObject)
                 {
+                    OnFlickerClicked?.Invoke();
                     StartCoroutine(BlinkScreen());  
                 }
             }

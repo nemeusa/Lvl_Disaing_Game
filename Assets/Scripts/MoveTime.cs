@@ -12,6 +12,18 @@ public class MoveTime : MonoBehaviour
     private int currentIndex = 0;
     private Renderer _renderer;
 
+    private bool isUnlocked = false;
+
+    private void OnEnable()
+    {
+        Flicker.OnFlickerClicked += Unlock;
+    }
+
+    private void OnDisable()
+    {
+        Flicker.OnFlickerClicked -= Unlock;
+    }
+
     private void Start()
     {
         if (points == null || points.Length < 2)
@@ -30,8 +42,15 @@ public class MoveTime : MonoBehaviour
         }
     }
 
+    private void Unlock()
+    {
+        isUnlocked = true;
+    }
+
     private void OnMouseOver()
     {
+        if (!isUnlocked) return;
+
         if (Input.GetMouseButtonDown(1)) // clic derecho
         {
             Advance(1);
