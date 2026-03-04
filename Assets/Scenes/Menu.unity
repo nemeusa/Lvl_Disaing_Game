@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be722739bb71c0242aa706f3c7590a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: Game
+  _sceneName: FedeSceneRevamp 1
 --- !u!1 &1597477094
 GameObject:
   m_ObjectHideFlags: 0
