@@ -11,7 +11,8 @@ public class Flicker : MonoBehaviour
     public int blinkCount = 2;  // Número de parpadeos
     public float blinkDuration = 0.3f;  // Duración de cada parpadeo
     public float timeBetweenBlinks = 0.1f;  // Tiempo entre parpadeos
-    public GameObject targetObject;  
+    public GameObject objectDeactivate;  
+    public ParticleSystem parts ;  
     private bool isBlinking = false;
 
     void Update()
@@ -23,7 +24,7 @@ public class Flicker : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))  
             {
-                if (hit.collider.gameObject == targetObject)
+                if (hit.collider.gameObject == objectDeactivate)
                 {
                     OnFlickerClicked?.Invoke();
                     StartCoroutine(BlinkScreen());  
@@ -48,7 +49,8 @@ public class Flicker : MonoBehaviour
 
         isBlinking = false;
 
-        gameObject.SetActive(false); 
+        gameObject.SetActive(false);
+        parts.Stop();
     }
 
     IEnumerator Fade(float startAlpha, float endAlpha)
