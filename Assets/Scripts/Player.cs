@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public void AddCoin()
     {
         _coins++;
-        _coinsText.text = "Monedas: " + _coins;
+        _coinsText.text = "Alfajores: " + _coins;
     }
 
 }
